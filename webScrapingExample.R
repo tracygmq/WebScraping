@@ -21,4 +21,11 @@ for (i in 1:length(abstract.url)){
   abs.html[i] <- getURLContent(abstract.url[i])
 }
 
-View(abs.html[120])
+#View(abs.html[1])
+#<div id="abstract">;abstract\">\n\t\t;\n\t</div>
+rule2 <- "([[:alpha:]]+)([[:punct:]]+[>][[:space:]]+)(.+)([[:space:]]+[<][/][d][i][v][>])"
+rule3 <- "([ ]*)[[:alpha:]]+"
+
+for (i in 1:length(abstract.url)){
+  summary <- str_match_all(abs.html[1],rule2)
+}
